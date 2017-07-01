@@ -5,3 +5,8 @@ def hello(request):
 	
 def null(request):
 	return HttpResponse("Placeholder for the homepage")
+
+def current_datetime(request):
+	now = datetime.datetime.now()
+	html = "<html><body>It's currently %s </body></html>" % now
+	return HttpResponse(html)
