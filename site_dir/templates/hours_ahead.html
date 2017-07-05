@@ -1,16 +1,13 @@
 {% extends "timebase.html" %}
 
-
 {% block title %}
 <p>
-Current Time
+Future Time
 </p>
 {% endblock %}
-
 
 {% block content %}
 <p>
-The current time is {{ now }}
+In {{ offset }} hours, it will be {{ future_time }}.
 </p>
 {% endblock %}
-
