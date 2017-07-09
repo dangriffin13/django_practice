@@ -8,13 +8,22 @@ class Publisher(models.Model):
 	country = models.CharField(max_length=50)
 	website = models.URLField()
 
+	def __str__(self):
+		return '%s, %s' % (self.name, self.website)
+
 class Author(models.Model):
 	first_name = models.CharField(max_length=30)
 	last_name = models.CharField(max_length=40)
 	email = models.EmailField()
+
+	def __str__(self):
+		return '%s, %s' % (self.last_name, self.first_name)
 
 class Book(models.Model):
 	title = models.CharField(max_length=100)
 	authors = models.ManyToManyField(Author)
 	publisher = models.ForeignKey(Publisher)
 	publication_date = models.DateField()
+
+	def __str__(self):
+		return self.title
