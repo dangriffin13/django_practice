@@ -29,3 +29,6 @@ def hours_ahead(request, offset):
 	
 	# html = "<html><body> In %s hours, it will be %s. </body></html>" % (offset, dt)
 	# return HttpResponse(html)
+
+def book_info(request, book):
+	return render(request, 'book_info.html'), {'book': book}
