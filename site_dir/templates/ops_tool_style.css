@@ -1,0 +1,21 @@
+.row > div{
+text-align: center;
+border: 1px solid black;
+}
+
+.row .span1{
+text-align: left;
+background-color: saddlebrown;
+color: floralwhite;
+height: 100px;
+font-size: 500%;
+font-family: "Baskerville Old Face";
+}
+
+#logo{
+padding-left: .2em
+}
+
+.span2{
+background-color: silver;
+}
