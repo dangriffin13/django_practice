@@ -12,6 +12,10 @@ font-size: 500%;
 font-family: "Baskerville Old Face";
 }
 
+.row .span1 > ul{
+	display: inline-block;
+}
+
 #logo{
 padding-left: .2em
 }
