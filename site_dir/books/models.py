@@ -32,7 +32,7 @@ class Book(models.Model):
 	publication_date = models.DateField(blank=True, null=True)
 
 	def __str__(self):
-		return self.title
+		return '%s, %s' % (self.title, self.publisher)
 
 	class Meta:
 		ordering = ['title']
