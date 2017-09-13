@@ -31,4 +31,7 @@ def hours_ahead(request, offset):
 	# return HttpResponse(html)
 
 def book_info(request, book):
-	return render(request, 'book_info.html'), {'book': book}
+	return render(request, 'book_info.html', {'book': book})
+
+def ops_tool(request):
+	return render(request, 'ops_tool.html') #, {'account': account}
