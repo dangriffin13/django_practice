@@ -35,3 +35,7 @@ def book_info(request, book):
 
 def ops_tool(request):
 	return render(request, 'ops_tool.html') #, {'account': account}
+
+def meta(request):
+	meta = request.META
+	return render(request, 'meta.html', {'meta': meta})

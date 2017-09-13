@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from mysite.views import hello, null, current_datetime, hours_ahead, ops_tool
+from mysite.views import hello, null, current_datetime, hours_ahead, ops_tool, meta
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^hello/$', hello),
     url(r'^time/$', current_datetime),
     url(r'^time/plus/(\d{1,2})/$', hours_ahead),
-    url(r'^sparta/$', ops_tool)
+    url(r'^sparta/$', ops_tool),
+    url(r'^meta/$', meta)
     
 ]
