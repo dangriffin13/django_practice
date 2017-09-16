@@ -39,3 +39,11 @@ def ops_tool(request):
 def meta(request):
 	meta = request.META
 	return render(request, 'meta.html', {'meta': meta})
+
+def display_meta(request):
+	values = request.META
+	html = []
+	for k in sorted(values):
+		html.append('<tr><td>%s</td><td>%s</td></tr>' % (k, values[k]))
+	return HttpResponse('<table>%s</table>' % '\n'.join(html))
+
