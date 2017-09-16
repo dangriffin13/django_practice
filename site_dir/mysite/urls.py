@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^time/plus/(\d{1,2})/$', hours_ahead),
     url(r'^sparta/$', ops_tool),
     url(r'^meta/$', meta),
-    url(r'^meta_table/$', display_meta)
+    url(r'^meta_table/$', display_meta),
+    url(r'^', include('books.urls')) #include books app
     
 ]

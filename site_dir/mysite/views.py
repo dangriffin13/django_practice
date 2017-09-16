@@ -47,3 +47,4 @@ def display_meta(request):
 		html.append('<tr><td>%s</td><td>%s</td></tr>' % (k, values[k]))
 	return HttpResponse('<table>%s</table>' % '\n'.join(html))
 
+
