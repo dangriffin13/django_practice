@@ -3,8 +3,8 @@ from django.http import HttpResponse
 from books.models import Book
 
 
-def search_form(request):
-	return render(request, 'books/search_form.html')
+#def search_form(request):
+	#return render(request, 'books/search_form.html')
 
 def search(request):
 	error = False
