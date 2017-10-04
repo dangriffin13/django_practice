@@ -7,12 +7,14 @@ from books.models import Book
 	#return render(request, 'books/search_form.html')
 
 def search(request):
-	error = False
+	errors = []
 	if 'q' in request.GET:
 		q = request.GET['q']
 		if not q:
-			error = True
+			errors.append('You must submit a search term.')
+		elif len(q) > 25:
+			errors.append('Please enter a search that\'s no longer than 25 characters.')
 		else:
 			books = Book.objects.filter(title__icontains=q)
 			return render(request, 'books/search_results.html', {'books': books, 'query': q})
-	return render(request, 'books/search_form.html', {'error': error})
+	return render(request, 'books/search_form.html', {'errors': errors})
